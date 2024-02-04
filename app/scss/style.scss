@@ -3,8 +3,105 @@
 @import "reset";
 @import "global";
 
+.header {
+  padding: 50px 0;
 
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
+  &-link__logo {
+    display: flex;
+  }
+
+  &__logo {
+    padding-right: 13px;
+  }
+
+  &__logo-text {
+    font-size: 36px;
+    line-height: 58px;
+    color: $accent;
+    @extend %rubik-500;
+  }
+}
+
+.menu {
+  &__list {
+    display: flex;
+  }
+
+  &-list__item + .menu-list__item {
+    margin-left: 40px;
+  }
+
+  &-list__link,
+  &-item__plus {
+    font-size: 15px;
+    line-height: 12px;
+    @extend %rubik-500;
+    color: $accent;
+  }
+}
+
+.user-nav {
+  display: flex;
+
+  &__link {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #edf1f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__menu {
+    background-color: $prise;
+  }
+
+  &__link--img {
+    line-height: 100%;
+  }
+
+  &__collection {
+    background-color: #fcd7b6;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0 20px;
+    border-radius: 25px;
+    width: 178px;
+    height: 50px;
+  }
+
+  &__link-btn {
+    position: relative;
+  }
+
+  &__num {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    top: -1px;
+    right: -10px;
+    font-size: 10px;
+    line-height: 18px;
+    text-align: center;
+    @extend %dmsans-400;
+    transform: translate(0, -50%)
+  }
+
+  &__border {
+    font-size: 35px;
+    color: #fde7d3;
+  }
+}
 
 
 @import "media";
